@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Jaime McCabe, Project 1: Dynamic Task Manager</title>
+
+
+
+<!--
+<script type="text/javascript" src="js/EventHelpers.js"></script>
+<script type="text/javascript" src="js/DragDropHelpers.js"></script>
+<script type="text/javascript" src="js/draganddrop.js"></script>
+-->
+
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.9.custom.min.js"></script>
+<script type="text/javascript" src="javascript.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="style.css"/> 
+
+
+</head>
+<body>
+<div id="header">
+  <h1>Dynamic Task Manager</h1>
+
+  <h2>Create tasks and track their progress</h2>
+</div>
+
+  <hr id="header_stripe"/>
+  <div id="page_container">
+  <div id="toppanel">
+    <div id="panel">
+    <div id="panel_contents"> </div>
+
+
+      <h1>Task Generator</h1>
+      <h2> Assign tasks to team members</h2>   
+      <div class="border" id="login">
+      <form id="taskGen">
+		<ul class="taskForm">
+      		<li>
+				<label for="task">Task:</label>
+				<input id="task" name="task" type="text" placeholder="Type task here"></input></li> <!--autofocus???-->
+			<li>
+				<label for="assignedTo">Assigned To:</label>
+				<input id="assignedTo" name="assignedTo" type="text" placeholder="Jane Smith"></input></li>			
+			<li>
+				<label for="datetime">Start Date</label>
+				<input id="datetime" name="datetime" type="date"></input></li>			
+			<li>
+				<label for="taskNotes">Task Notes:</label>
+				<input id="taskNotes" name="taskNotes" type="text" placeholder="Task description..."></input></li>
+	        <li>
+	        	<label for="priorityLevel">Priority:</label>
+					<select>
+					  <option value ="1">1</option>
+					  <option value ="2">2</option>
+					  <option value ="3">3</option>
+					  <option value ="5">5</option>
+					  <option value ="8">8</option>
+					  <option value ="13">13</option>
+					  <option value ="20">20</option>
+					</select></li>
+			<li>
+		        <label for="loe">Level Of Effort:</label>
+					<select>
+						  <option value ="low">Low</option>
+						  <option value ="medium">Medium</option>
+						  <option value ="high">High</option>
+					</select></li>
+					
+            <li><input type="submit" value="Submit"/></li>
+        </ul>
+        </form>
+      </div>
+      
+    </div>
+    <div class="panel_button" style="display: visible;"><img src="images/expand.png"  alt="expand"/> <a href="#">Add Task</a> </div>
+    <div class="panel_button" id="hide_button" style="display: none;"><img src="images/collapse.png" alt="collapse" /> <a href="#">Hide</a> </div>
+
+  </div>
+  
+  <div id="content">
+    <p></p>
+    
+     <form>
+            <fieldset>
+                <legend>Project Tasks</legend> 
+
+                <p>This is a test to see if i can replicate the task boards at work.</p>
+
+
+		<div class="taskTable">
+			<div class="column"> 
+				<h1>Not Started</h1> 
+                       		<a href="#" draggable="true">Task 1</a>
+				<a href="#" draggable="true">Task 2</a>
+				<a href="#" draggable="true">Task 3</a>
+                       		<a href="#" draggable="true">Task 4</a>
+				<div class="help">Drag a task from this list to place in queue, progress, or completed.</div> 
+			</div>
+			<div class="column"> <h1>In Queue</h1> <div class="help">Dragging a task from here to place in progress or completed.</div> </div>
+			<div class="column"> <h1>In Progress</h1> <div class="help">Drag a task to completed once the work for this task has been reviewed and accepted.</div> </div>
+			<div class="column"> <h1>Completed</h1> <div class="help">Congrats! This stuff is done!</div> </div>
+			<div style="clear: both;"></div>
+		</div>
+
+
+            </fieldset>
+        </form>
+		<br />
+		
+		<label for="query">Search Tasks</label>
+		<input id="query" name="query" type="search" placeholder="search the app!"></input>
+    
+    
+  </div>
+  <div id="footer">
+    <p>A work in progress...</p>
+
+  </div>
+</div>
+</body>
+</html>
