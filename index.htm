@@ -37,7 +37,7 @@
     <div id="panel_contents"> </div>
 
 
-      <h1>Task Generator TEST</h1>
+      <h1>Task Generator</h1>
       <h2> Assign tasks to team members</h2>   
       <div class="border" id="login">
       <form id="taskGen">
@@ -49,14 +49,14 @@
 				<label for="assignedTo">Assigned To:</label>
 				<input id="assignedTo" name="assignedTo" type="text" placeholder="Jane Smith"></input></li>			
 			<li>
-				<label for="datetime">Start Date</label>
+				<label for="datetime">Start Date:</label>
 				<input id="datetime" name="datetime" type="date"></input></li>			
 			<li>
 				<label for="taskNotes">Task Notes:</label>
 				<input id="taskNotes" name="taskNotes" type="text" placeholder="Task description..."></input></li>
 	        <li>
 	        	<label for="priorityLevel">Priority:</label>
-					<select>
+					<select id="priorityLevel" name="priorityLevel">
 					  <option value ="1">1</option>
 					  <option value ="2">2</option>
 					  <option value ="3">3</option>
@@ -67,7 +67,7 @@
 					</select></li>
 			<li>
 		        <label for="loe">Level Of Effort:</label>
-					<select>
+					<select id="loe" name="loe">
 						  <option value ="low">Low</option>
 						  <option value ="medium">Medium</option>
 						  <option value ="high">High</option>
@@ -95,17 +95,13 @@
 
 
 		<div class="taskTable">
-			<div class="column"> 
+			<div id="notStarted" class="column"> 
 				<h1>Not Started</h1> 
-                       		<a href="#" draggable="true">Task 1</a>
-				<a href="#" draggable="true">Task 2</a>
-				<a href="#" draggable="true">Task 3</a>
-                       		<a href="#" draggable="true">Task 4</a>
 				<div class="help">Drag a task from this list to place in queue, progress, or completed.</div> 
 			</div>
-			<div class="column"> <h1>In Queue</h1> <div class="help">Dragging a task from here to place in progress or completed.</div> </div>
-			<div class="column"> <h1>In Progress</h1> <div class="help">Drag a task to completed once the work for this task has been reviewed and accepted.</div> </div>
-			<div class="column"> <h1>Completed</h1> <div class="help">Congrats! This stuff is done!</div> </div>
+			<div id="inQueue" class="column "> <h1>In Queue</h1> <div class="help">Dragging a task from here to place in progress or completed.</div> </div>
+			<div id="inProgress" class="column"> <h1>In Progress</h1> <div class="help">Drag a task to completed once the work for this task has been reviewed and accepted.</div> </div>
+			<div id="completed" class="column"> <h1>Completed</h1> <div class="help">Congrats! This stuff is done!</div> </div>
 			<div style="clear: both;"></div>
 		</div>
 
@@ -121,8 +117,7 @@
   </div>
   <div id="footer">
     <p>A work in progress...</p>
-
-<p> a test to see if git recognizes this file</p>
+<p> things are in table form still</p>
   </div>
 </div>
 </body>
